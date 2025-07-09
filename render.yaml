@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: memescanner-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 2 --timeout 120
+    envVars:
+      - key: ALLOWED_ORIGINS
+        value: https://memescanner.netlify.app
+      - key: ENVIRONMENT
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: API_KEY
+        value: ms-prod-2024-secure-key
+      - key: POLYGON_RPC
+        value: https://polygon-rpc.com
+      - key: CONTRACT_ADDRESS
+        value: 0x2C34d38237D69dAfD9a447B95244b107b25da716
+    healthCheckPath: /api/health
