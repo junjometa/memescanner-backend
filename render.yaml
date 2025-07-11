@@ -17,5 +17,13 @@ services:
       - key: POLYGON_RPC
         value: https://polygon-rpc.com
       - key: CONTRACT_ADDRESS
-        value: 0x2C34d38237D69dAfD9a447B95244b107b25da716
+        value: 0xC95e7fCB69666998730c35B26F4B27E3b9Afa692
+      - key: OWNER_PRIVATE_KEY
+        value: # Dejar vacío - no se necesita para verificar pagos
+      - key: USDC_POLYGON
+        value: 0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174
+      - key: USDT_POLYGON
+        value: 0xc2132D05D31c914a87C6611C10748AEb04B58e8F
+      - key: DAI_POLYGON
+        value: 0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063
     healthCheckPath: /api/health
