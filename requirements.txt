@@ -7,3 +7,4 @@ python-dotenv==1.0.0
 gunicorn==21.2.0
 redis==5.0.1
 APScheduler==3.10.4
+setuptools==69.0.0
