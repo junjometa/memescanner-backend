@@ -7,7 +7,7 @@ services:
     startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 2 --timeout 120
     envVars:
       - key: ALLOWED_ORIGINS
-        value: https://memescanner.netlify.app
+        value: https://memescannerpro.com,https://www.memescannerpro.com,https://vocal-platypus-2b186a.netlify.app
       - key: ENVIRONMENT
         value: production
       - key: SECRET_KEY
